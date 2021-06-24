@@ -1,0 +1,307 @@
+.navbar {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .2);
+   background:  rgba(170, 100, 9, 0.904);
+   z-index: 99;
+ 
+}
+
+.text-gray {
+    color: rgb(179, 33, 33);
+}
+
+.delete-btn {
+    width: 40px;
+    font-size: 30px;
+    margin-right: 8px;
+}
+
+#navLinkItem {
+    position: relative;
+}
+
+#cartNumber {
+    width: 30px;
+    height: 30px;
+    background-color: tomato;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    top: -6px;
+    left: 9px;
+    color: white;
+    transform: scale(.6);
+}
+
+#navLinkItem:hover #cartNumber {
+    background-color: rgb(231, 90, 65);
+}
+
+body {
+    padding-top: 56px;
+}
+
+#hcarouselId {
+    /* 100% viewport height */
+    height: calc(100vh - 56px);
+    display: flex;
+    /* filter: brightness(.5); */
+    /* 水平 左 中 下 */
+    justify-content: center;
+    /* 垂直 上 中 下 */
+    align-items: center;
+    /* padding: 100px 0px; */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center top;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    position: relative;
+}
+
+
+
+
+footer {
+    border-top: 1px solid rgb(206, 206, 206);
+    background-color: #fdfdfd;
+    text-align: center;
+    color: #888;
+    margin-top: 50px;
+}
+
+
+
+/*=============================================
+=                  Gallery                    =
+=============================================*/
+
+.gallery-block,
+.gallery-text {
+    transition: all .5s ease-out;
+}
+
+.gallery-block {
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* filter: grayscale(100%); */
+}
+
+.gallery-text {
+    color: white;
+    /* 預設 400, 100~900 */
+    font-weight: 700;
+    text-shadow: 0 8px 10px rgba(0, 0, 0, .5);
+    text-align: center;
+    /* font-size: 6px; */
+    transform: scale(.3) rotate(-360deg);
+    opacity: 0;
+    z-index: 3;
+}
+
+
+.gallery-block:hover .gallery-text {
+    transform: scale(1.5) rotate(0deg);
+    opacity: 1;
+} 
+
+
+
+
+/* 放入背景圖片 */
+
+#galleryImage1 {
+    background-image: url('../img/gallery-image-1.jpg');
+}
+
+#galleryImage2 {
+    background-image: url('../img/gallery-image-2.jpg');
+}
+
+#galleryImage3 {
+    background-image: url('../img/gallery-image-3.jpg');
+}
+
+#galleryImage4 {
+    background-image: url('../img/gallery-image-4.jpg');
+}
+
+#galleryImage5 {
+    background-image: url('../img/gallery-image-5.jpg');
+}
+
+#galleryImage6 {
+    background-image: url('../img/gallery-image-6.jpg');
+}
+
+#galleryImage7 {
+    background-image: url('../img/gallery-image-7.jpg');
+}
+
+#galleryImage8 {
+    background-image: url('../img/gallery-image-8.jpg');
+}
+
+
+/* 加入gallary遮罩 */
+
+#gallerySection .container-fluid {
+    position: relative;
+    /* z-index: 3; */
+}
+
+.gallery-block:after {
+    content: "";
+    background:rgb(31, 30, 30);
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    transition: all .3s ease;
+}
+
+.gallery-block:after {
+    /* background: rgb(255, 42, 166); */
+    opacity: 0;
+}
+
+.gallery-block:hover:after {
+    /* background: rgb(255, 42, 166); */
+    opacity: .6;
+}
+
+.h2-color{
+    color: rgb(172, 65, 16);
+}
+
+
+/* 商品區域hover特效 */
+section #productRow {
+    transition: all .4s ease;
+}
+
+section #productRow{
+    opacity: .3;
+    transform: scale(.93);
+    /* transform: translateY(2%); */
+}
+
+section.active #productRow{
+    opacity: 1;
+    transform: scale(1);
+    /* transform: translateY(0%); */
+}
+
+/* 置頂按鈕 */
+#goBackBtn {
+    background:  rgba(170, 100, 9, 0.904);
+    width: 40px;
+    height: 40px;
+    border:none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+a{
+    text-decoration: none;
+  }
+  
+  .tab-contnet{
+    /* flex-direction:column; */
+    margin:20px 0 ;
+    max-width: 100%;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 30px 100px;
+    position: relative;
+  }
+  
+  .checkout-btn {
+      width: 100%;
+      margin-bottom: 30px;
+      /* padding-left: 200px; */
+  }
+  
+  
+  .checkout-btn .btn{
+      padding: 0;
+      border-radius: 0;
+      border: 1px solid #EAF0ED;
+  }
+  .checkout-btn .btn.active{
+      background-color: #EAF0ED;
+      border: 4px solid #e7d104;
+   }
+  
+   .checkout-btn .btn{
+    transition: all .5s cubic-bezier(.36,1.19,.63,1.39);
+   }
+  
+   .checkout-btn img:hover {
+    border: 1px solid #b68110;
+   }
+  
+  .tabin {
+    transition: all .5s ease;
+  }
+  
+   .tabin.turnon {
+    border: 4px solid #e7d104;
+    transition: all .5s ease;
+   }
+  
+  /* 向下箭頭 */
+  
+   .card-btns-1,
+   .card-btns-2,
+   .card-btns-3 {
+    position: absolute;
+    bottom: -20px;
+    left:34%;
+    transition: all .5s cubic-bezier(.36,1.19,.63,1.39);
+  }
+  
+  
+  .card-btns{
+    display: none;
+  }
+  
+  .card-btns.showup{
+    display: block;
+  }
+  
+  .img1,
+  .img2,
+  .img3{
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .fa {
+    color:  #e7d104;
+  }
+
+  @media (max-width: 800px) {
+    .card-btns-1,
+    .card-btns-2,
+    .card-btns-3 {
+      position: absolute;
+      bottom: -20px;
+      left:32%;
+      transition: all .5s cubic-bezier(.36,1.19,.63,1.39);
+      font-size: 12px;
+    }
+  }
+  
