@@ -142,7 +142,7 @@ import {tr} from './format-element.js';
                 section.classList.add("active");
             };
     });
-
+    document.getElementById('goBackBtn').addEventListener('click', topFunction)
     // 回到最上層按鈕
     function topFunction() {
         document.body.scrollTop = 0; // For Safari
